@@ -34,7 +34,7 @@ const HeaderCenter: React.FC = () => {
                     <DropdownMenuItem key={subIndex}>
                       <Link
                         href={subItem.href}
-                        className="block text-sm hover:bg-gray-100 w-full"
+                        className="block text-sm hover:bg-gray-100 hover:text-gray-500 w-full"
                       >
                         {subItem.label}
                       </Link>
@@ -43,7 +43,7 @@ const HeaderCenter: React.FC = () => {
                 </DropdownMenuContent>
               </DropdownMenu>
             ) : (
-              <Link href={item.href} className="block hover:bg-gray-300">
+              <Link href={item.href} className="block hover:text-gray-500">
                 {item.label}
               </Link>
             )}
