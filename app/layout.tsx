@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
-import { Inter as FontSans } from "next/font/google";
+import { DM_Sans as FontSans } from "next/font/google";
 import { cn } from "@/lib/utils";
+import Header from "@/components/layout/header";
+import Footer from "@/components/layout/footer";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -20,13 +22,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={cn(
-          "min-h-screen bg-background font-sans antialiased",
-          fontSans.variable
-        )}
-      >
-        {children}
+      <body className={cn("min-h-screen flex flex-col", fontSans.variable)}>
+        <Header />
+        <main className="flex-grow">{children}</main>
+        <Footer />
       </body>
     </html>
   );
