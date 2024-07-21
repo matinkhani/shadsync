@@ -24,7 +24,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={cn("min-h-screen flex flex-col", fontSans.variable)}>
         <Header />
-        <main className="flex-grow">{children}</main>
+        <main className="flex-grow pt-[76px]">{children}</main>
         <Footer />
       </body>
     </html>
