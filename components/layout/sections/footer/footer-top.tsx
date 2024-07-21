@@ -6,6 +6,7 @@ import {
   FooterSocialItems,
   FooterStoresItems,
 } from "./constants/items/footer.items";
+import { STRING_CONSTANTS } from "@/constants/strings/string.constants";
 
 interface FooterColumnProps {
   title: string;
@@ -38,7 +39,7 @@ const FooterTop: FC = () => {
       <div className="container mx-auto flex flex-wrap justify-between gap-10">
         {/* Social Media */}
         <div className="flex flex-col gap-8">
-          <p className="text-lg text-black">Social Media</p>
+          <p className="text-lg text-black">{STRING_CONSTANTS.SOCIAL_MEDIA}</p>
           <div className="flex gap-4">
             {FooterSocialItems.map((item, index) => (
               <Link href={item.link} key={index}>
@@ -48,9 +49,18 @@ const FooterTop: FC = () => {
           </div>
         </div>
         {/* Other Columns */}
-        <FooterColumn title="Our Store" items={FooterStoresItems} />
-        <FooterColumn title="Information" items={FooterInformationItems} />
-        <FooterColumn title="Contact Info" items={FooterContactInfoItems} />
+        <FooterColumn
+          title={STRING_CONSTANTS.OUR_STORE}
+          items={FooterStoresItems}
+        />
+        <FooterColumn
+          title={STRING_CONSTANTS.INFORMATION}
+          items={FooterInformationItems}
+        />
+        <FooterColumn
+          title={STRING_CONSTANTS.CONTACT_INFO}
+          items={FooterContactInfoItems}
+        />
       </div>
     </footer>
   );
