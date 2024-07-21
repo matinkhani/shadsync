@@ -19,7 +19,7 @@ const HeaderCenter: React.FC = () => {
   };
 
   return (
-    <div className="h-[18px] flex">
+    <div className="h-[18px] flex text-black">
       <ul className="flex gap-8 w-full list-none">
         {MenuItems.map((item, index) => (
           <li key={index} className="relative group">
