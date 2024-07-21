@@ -1,8 +1,10 @@
 "use client";
 import React, { useState, useEffect, FC } from "react";
-import HeaderCenter from "./sections/header-center";
-import HeaderRight from "./sections/header-right";
-import HeaderLeft from "./sections/header-left";
+import HeaderCenter from "./sections/header/header-center";
+import HeaderRight from "./sections/header/header-right";
+import HeaderLeft from "./sections/header/header-left";
+
+// todo => find a way to remove client from header component
 
 const Header: FC = () => {
   const [isVisible, setIsVisible] = useState<boolean>(true);
